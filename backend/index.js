@@ -11,7 +11,7 @@ import postulacionRoutes from "./src/routes/postulacion.routes.js";
 import variedadesRoute from "./src/routes/variedades.routes.js";
 import FincaRouter from "./src/routes/finca.routes.js";
 import autenticacionRouter from "./src/routes/autenticacion.routes.js";
-
+import cors from "cors"
 const app = express();
 
 
@@ -30,7 +30,8 @@ app.use("/user", routerChat);
 app.use("/user", routerDocument);
 app.use("/postulacion", postulacionRoutes);
 app.use("/variedad", variedadesRoute);
-app.use(autenticacionRouter)
+app.use(autenticacionRouter);
+app.use(cors());
 
 app.set("view engine", "ejs");
 app.set("views", "./view");
