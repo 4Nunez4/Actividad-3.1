@@ -1,13 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Registro from "./pages/Registro";
+
+import React, {useState, useEffect} from 'react';
+import RegistrarUsuario from './pages/Registro';
+
 
 function App() {
-return (
-<BrowserRouter>
-<Routes>
-<Route path="/" element={<Registro />} />
-</Routes>
-</BrowserRouter>
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <RegistrarUsuario />
+    </>
   )
 }
 
